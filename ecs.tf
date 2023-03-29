@@ -22,7 +22,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 
 resource "aws_ecs_service" "my_service" {
   name            = "my-service"
-  cluster         = aws_ecs_cluster.my_cluster.id
+  cluster         = aws_ecs_cluster.demo-app.id
   task_definition = aws_ecs_task_definition.my_task_definition.arn
   desired_count   = 1
 
