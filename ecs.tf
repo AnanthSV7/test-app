@@ -1,3 +1,7 @@
+resource "aws_ecs_cluster" "fargate_cluster" {
+  name = "my-fargate-cluster" # Replace with your desired cluster name
+}
+
 # Define the ECS task definition
 resource "aws_ecs_task_definition" "fargate_task_definition" {
   family                   = "my-fargate-task" # Replace with your desired task family name
