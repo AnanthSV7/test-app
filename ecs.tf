@@ -24,7 +24,7 @@ resource "aws_ecs_task_definition" "fargate_task_definition" {
 # Define the ECS Fargate service
 resource "aws_ecs_service" "fargate_service" {
   name            = "my-fargate-service" # Replace with your desired service name
-  cluster         = aws_ecs_cluster.demo-app.id
+  cluster         = aws_ecs_cluster.my-fargate-service.id
   task_definition = aws_ecs_task_definition.fargate_task_definition.arn
   desired_count   = 1
   launch_type     = "FARGATE"
