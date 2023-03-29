@@ -23,6 +23,6 @@ jobs:
         id: apply
         run: terraform apply -auto-approve
       - name: Output ECS cluster name
-        run: echo "::set-output name=demo-app::$(terraform output demo-app)"
+        run: echo "::set-output name=ecs-cluster::$(terraform output ecs-cluster)"
       - name: Output Fargate task definition ARN
         run: echo "::set-output name=task_definition_arn::$(terraform output fargate_task_definition_arn)"
