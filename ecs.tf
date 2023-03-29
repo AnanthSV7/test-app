@@ -20,9 +20,9 @@ resource "aws_ecs_task_definition" "my_task_definition" {
   ])
 }
 
-resource "aws_ecs_service" "my_service" {
-  name            = "my-service"
-  cluster         = aws_ecs_cluster.my_service.id
+resource "aws_ecs_service" "ecs-cluster" {
+  name            = "ecs-cluster"
+  cluster         = aws_ecs_cluster.ecs-cluster.id
   task_definition = aws_ecs_task_definition.my_task_definition.arn
   desired_count   = 1
 
