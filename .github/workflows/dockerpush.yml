@@ -23,4 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ananthsv7/test-app:latest
+          tags: ananthsv7/test-app:new
