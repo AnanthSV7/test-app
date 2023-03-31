@@ -3,7 +3,7 @@ FROM node:10
 
 WORKDIR /app
 
-COPY ./app/package*.json ./
+COPY index.js ./
 
 RUN npm install
 
